@@ -2,41 +2,44 @@ function recommend() {
     const input = document.getElementById("searchInput").value.toLowerCase();
     const results = document.getElementById("results");
 
+    let content = "";
+
     if (input === "beach") {
-        results.innerHTML = `
-            <h2>Beach Recommendations</h2>
-            <div class="img-row">
-                <img src="images/beach1.avif" alt="Cambodia beach">
-                <img src="images/beach2.jpg" alt="Qinghai">
+        content = `
+            <h2 class="title">🌴 Beach Recommendations</h2>
+            <div class="gallery">
+                <img src="images/beach1.avif" alt="Beach 1">
+                <img src="images/beach2.jpg" alt="Beach 2">
             </div>
-            <p>Relax on the world's most beautiful beaches.</p>
+            <p class="desc">Relax on the world's most beautiful beaches.</p>
         `;
     }
 
     else if (input === "temple") {
-        results.innerHTML = `
-            <h2>Temple Recommendations</h2>
-            <div class="img-row">
-                <img src="images/temple1.jfif" alt="Angkor Wat">
-                <img src="images/temple2.jfif" alt="Chinese Temple">
+        content = `
+            <h2 class="title">⛩ Temple Recommendations</h2>
+            <div class="gallery">
+                <img src="images/temple1.jfif" alt="Temple 1">
+                <img src="images/temple2.jfif" alt="Temple 2">
             </div>
-            <p>Explore stunning cultural and religious temple sites.</p>
+            <p class="desc">Explore stunning cultural and religious temple sites.</p>
         `;
     }
 
     else if (input === "country") {
-        results.innerHTML = `
-            <h2>Country Recommendations</h2>
-            <div class="img-row">
-                <img src="images/country1.jpg" alt="Cambodia">
-                <img src="images/country2.jfif" alt="China">
+        content = `
+            <h2 class="title">🌍 Country Recommendations</h2>
+            <div class="gallery">
+                <img src="images/country1.jpg" alt="Country 1">
+                <img src="images/country2.jfif" alt="Country 2">
             </div>
-            <p>Discover top sightseeing destinations from countries around the world.</p>
+            <p class="desc">Discover top destinations around the world.</p>
         `;
     }
 
     else {
-        results.innerHTML = `<p>No results found. Try: <strong>beach</strong>, <strong>temple</strong>, or <strong>country</strong>.</p>`;
+        content = `<p class="error">❌ No results found. Try: <strong>beach</strong>, <strong>temple</strong>, or <strong>country</strong>.</p>`;
     }
-}
 
+    results.innerHTML = content;
+}
