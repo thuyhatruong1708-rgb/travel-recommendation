@@ -43,3 +43,4 @@ function recommend() {
 
     results.innerHTML = content;
 }
+
