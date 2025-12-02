@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendation - Home</title>
+    <title>Home - TravelGuide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
-        <h2 class="logo">TravelGuide</h2>
-        <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+        <h2>TravelGuide</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
     </nav>
 
-    <!-- Home Introduction -->
-    <section class="intro">
+    <section class="home">
         <h1>Welcome to TravelGuide</h1>
-        <p>Your personalized travel recommendation we
+        <p>Your personalized travel recommendation website</p>
+
+        <!-- ⭐ SEARCH BOX HERE -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Type: beach, temple, country">
+            <button onclick="recommend()">Search</button>
+        </div>
+
+        <!-- ⭐ RESULTS APPEAR HERE -->
+        <div id="results"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
