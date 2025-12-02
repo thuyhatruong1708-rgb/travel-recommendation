@@ -2,7 +2,7 @@ function recommend() {
     const input = document.getElementById("searchInput").value.toLowerCase();
     const results = document.getElementById("results");
 
-    const basePath = "travel-recommendation/images/";
+    const basePath = "images/";
 
     if (input === "beach") {
         results.innerHTML = `
@@ -27,11 +27,11 @@ function recommend() {
             <h2>Country Recommendations</h2>
             <img src="${basePath}country1.jpg">
             <img src="${basePath}country2.jfif">
-            <p>Discover destinations from countries around the world.</p>
+            <p>Discover beautiful destinations around the world.</p>
         `;
     }
 
     else {
-        results.innerHTML = `<p>No results found. Try beach, temple, or country.</p>`;
+        results.innerHTML = `<p>No results found. Try typing: beach, temple, or country.</p>`;
     }
 }
